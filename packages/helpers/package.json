@@ -1,0 +1,23 @@
+{
+  "name": "@artginzburg/helpers",
+  "private": true,
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Art Ginzburg <ginzburg.arthur@gmail.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "lib/helpers.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "node ./__tests__/@artginzburg/helpers.test.js"
+  }
+}

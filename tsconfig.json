@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es6",
+    "lib": ["es6"],
+
+    // IDE TypeScript support
+    "declaration": true,
+
+    // IDE "jump to source" support
+    "sourceMap": true,
+    "declarationMap": true,
+
+    // QOL
+    "incremental": true,
+    "esModuleInterop": true,
+
+    // Strictness
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noUncheckedIndexedAccess": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitOverride": true,
+    "exactOptionalPropertyTypes": true,
+    "checkJs": true,
+
+    // Root-only config that HAS to be overwritten on individual package level
+    "outDir": "./dev-null"
+  },
+  "exclude": ["node_modules", "**/*.spec.ts"]
+}
