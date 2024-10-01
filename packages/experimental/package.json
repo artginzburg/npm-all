@@ -1,6 +1,6 @@
 {
   "name": "@artginzburg/experimental",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Buffer zone for my tools that are grouped, but are not huge or organized enough to be a separate library",
   "keywords": [],
   "author": "Art Ginzburg <ginzburg.arthur@gmail.com>",
