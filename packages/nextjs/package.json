@@ -1,0 +1,36 @@
+{
+  "name": "@artginzburg/nextjs",
+  "version": "0.1.0",
+  "description": "> TODO: description",
+  "author": "Art Ginzburg <ginzburg.arthur@gmail.com>",
+  "homepage": "https://github.com/artginzburg/npm-all/tree/main/packages/nextjs",
+  "license": "ISC",
+  "exports": {
+    "./splash-screen": "./src/splash-screen/index.ts",
+    "./*": "./src/*.ts"
+  },
+  "files": [
+    "src"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": "artginzburg/npm-all",
+  "scripts": {
+    "test": "node ./__tests__/@artginzburg/nextjs.test.js"
+  },
+  "bugs": {
+    "url": "https://github.com/artginzburg/npm-all/issues"
+  },
+  "devDependencies": {
+    "@types/object.groupby": "^1.0.4",
+    "@types/react": "^18.3.10",
+    "next": "^14.2.14"
+  },
+  "peerDependencies": {
+    "next": "^14.2.14"
+  },
+  "dependencies": {
+    "object.groupby": "^1.0.3"
+  }
+}

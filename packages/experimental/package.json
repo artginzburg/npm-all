@@ -4,6 +4,7 @@
   "description": "Buffer zone for my tools that are grouped, but are not huge or organized enough to be a separate library",
   "keywords": [],
   "author": "Art Ginzburg <ginzburg.arthur@gmail.com>",
+  "homepage": "https://github.com/artginzburg/npm-all/tree/main/packages/experimental",
   "license": "ISC",
   "exports": {
     "./*": "./lib/*.js"
@@ -15,12 +16,16 @@
   "publishConfig": {
     "access": "public"
   },
+  "repository": "artginzburg/npm-all",
   "scripts": {
     "tsc": "tsc",
     "test": "node ./__tests__/index.test.js"
   },
   "devDependencies": {
     "@types/react": "^18.3.10"
+  },
+  "bugs": {
+    "url": "https://github.com/artginzburg/npm-all/issues"
   },
   "gitHead": "3db6924f98bd6d3ce9ac65e5c31b13e72caed963"
 }
