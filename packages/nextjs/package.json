@@ -6,10 +6,11 @@
   "homepage": "https://github.com/artginzburg/npm-all/tree/main/packages/nextjs",
   "license": "ISC",
   "exports": {
-    "./splash-screen": "./src/splash-screen/index.ts",
-    "./*": "./src/*.ts"
+    "./splash-screen": "./lib/splash-screen/index.js",
+    "./*": "./lib/*.js"
   },
   "files": [
+    "lib",
     "src"
   ],
   "publishConfig": {
@@ -17,7 +18,7 @@
   },
   "repository": "artginzburg/npm-all",
   "scripts": {
-    "test": "node ./__tests__/@artginzburg/nextjs.test.js"
+    "tsc": "tsc"
   },
   "bugs": {
     "url": "https://github.com/artginzburg/npm-all/issues"

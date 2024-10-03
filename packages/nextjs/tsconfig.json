@@ -4,13 +4,14 @@
     "outDir": "./lib",
 
     "lib": ["esnext"],
-    "noEmit": true,
     "jsx": "preserve",
     "plugins": [
       {
         "name": "next"
       }
-    ]
+    ],
+
+    "module": "Preserve"
   },
   "include": ["./src"]
 }
