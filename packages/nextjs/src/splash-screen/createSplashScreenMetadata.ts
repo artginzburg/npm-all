@@ -4,7 +4,7 @@ import type { AppleWebApp } from 'next/dist/lib/metadata/types/extra-types';
 
 export function createSplashScreenMetadata(
   /** @default './splash-screen/' */
-  urlBase?: string,
+  urlBase = './splash-screen/',
 ): AppleWebApp['startupImage'] {
   return appleDeviceSizesWithSlugs.map(({ slug, width, height, pixelRatio }) => ({
     url: `${urlBase}${slug}`,
