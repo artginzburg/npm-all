@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "publish": "pnpm run build && lerna publish",
+    "clean": "lerna exec 'rm -r lib'",
     "build": "lerna run tsc",
     "dev": "pnpm run build -- --watch",
     "link": "lerna exec \"pnpm link -g\"",
