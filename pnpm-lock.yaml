@@ -47,7 +47,7 @@ importers:
   packages/next-link-busy:
     dependencies:
       '@artginzburg/experimental':
-        specifier: workspace:^0.1.1
+        specifier: workspace:^0.1.5
         version: link:../experimental
       ahooks:
         specifier: ^3.8.1
