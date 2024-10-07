@@ -1,6 +1,6 @@
 {
   "name": "next-link-busy",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "> TODO: description",
   "author": "Art Ginzburg <ginzburg.arthur@gmail.com>",
   "homepage": "https://github.com/artginzburg/npm-all/tree/main/packages/next-link-busy",
@@ -35,7 +35,7 @@
     "react": "^18.3.1"
   },
   "dependencies": {
-    "@artginzburg/experimental": "workspace:^0.1.5",
+    "@artginzburg/experimental": "workspace:^0.1.6",
     "ahooks": "^3.8.1"
   }
 }
