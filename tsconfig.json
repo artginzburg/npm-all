@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
     "target": "es6",
     "lib": ["es6"],
 
@@ -26,6 +27,7 @@
     "noImplicitOverride": true,
     "exactOptionalPropertyTypes": true,
     "checkJs": true,
+    "noUncheckedSideEffectImports": true,
 
     // Root-only config that HAS to be overwritten on individual package level
     "outDir": "./dev-null"
