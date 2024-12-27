@@ -10,6 +10,8 @@ import {
 import { useEventListener } from 'ahooks';
 import { useEffect } from 'react';
 
+export default LinkBusy;
+
 export function LinkBusy() {
   const ariaBusyAttribute = createAttributeController('aria-busy', booleanString);
   /** allows to differentiate between links that have custom aria-busy logic applied locally, and links touched by this script. */
