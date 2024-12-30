@@ -1,6 +1,6 @@
 {
   "name": "@artginzburg/swr-idb-cache",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "> TODO: description",
   "author": "Art Ginzburg <ginzburg.arthur@gmail.com>",
   "homepage": "https://github.com/artginzburg/npm-all/tree/main/packages/swr-idb-cache",
