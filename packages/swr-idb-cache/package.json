@@ -1,0 +1,49 @@
+{
+  "name": "@artginzburg/swr-idb-cache",
+  "version": "0.1.7",
+  "description": "> TODO: description",
+  "author": "Art Ginzburg <ginzburg.arthur@gmail.com>",
+  "homepage": "https://github.com/artginzburg/npm-all/tree/main/packages/swr-idb-cache",
+  "license": "MIT",
+  "module": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./*": "./lib/*.js"
+  },
+  "files": [
+    "lib",
+    "src"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/artginzburg/npm-all.git",
+    "directory": "packages/swr-idb-cache"
+  },
+  "scripts": {
+    "tsc": "tsc"
+  },
+  "bugs": {
+    "url": "https://github.com/artginzburg/npm-all/issues"
+  },
+  "keywords": [
+    "swr",
+    "cache",
+    "IndexedDB",
+    "idb"
+  ],
+  "dependencies": {
+    "idb": "^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0"
+  },
+  "peerDependencies": {
+    "react": "^18.3.1",
+    "swr": "^2.3.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.10",
+    "react": "^18.3.1",
+    "swr": "^2.3.0"
+  }
+}
