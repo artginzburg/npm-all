@@ -15,15 +15,14 @@ export function createSplashScreenRoute({
   ImageContainerComponent?: React.FC<ImageContainerComponentProps>;
   imageContainerComponentProps?: Partial<React.ComponentProps<typeof ImageContainerComponent>>;
 }): {
-  dynamicParams: boolean;
   generateStaticParams: () => SplashParams[];
-  GET: (_req: Request, { params }: SplashProps) => ImageResponse;
+  GET: (_req: Request, { params }: SplashProps) => Promise<ImageResponse>;
 } {
   return {
-    dynamicParams: false,
     generateStaticParams: () => appleDeviceSizesWithSlugs,
-    GET(_req, { params }) {
-      const deviceSize = getAppleDeviceSizeBySlug(params.slug);
+    async GET(_req, { params }) {
+      const { slug } = await params;
+      const deviceSize = getAppleDeviceSizeBySlug(slug);
       const screenSize = getScreenSizeByDeviceSize(deviceSize);
 
       return new ImageResponse(
@@ -41,7 +40,7 @@ export function createSplashScreenRoute({
 }
 
 type SplashParams = { slug: string };
-export type SplashProps = { params: SplashParams };
+export type SplashProps = { params: Promise<SplashParams> };
 
 function getScreenSizeByDeviceSize(
   deviceSize: ReturnType<typeof getAppleDeviceSizeBySlug>,
