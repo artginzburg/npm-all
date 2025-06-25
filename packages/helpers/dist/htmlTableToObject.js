@@ -12,7 +12,7 @@ function htmlTableToObject(
   );
   const ret = [];
   for (let i = 1; i < trs.length; i++) {
-    /** @type Record<string, string> */
+    /** @type Record<string,string> */
     const obj = {};
     // @ts-expect-error this helper is designed for manual usage in the browser, so this is not critical
     const tds = trs[i].querySelectorAll('td');

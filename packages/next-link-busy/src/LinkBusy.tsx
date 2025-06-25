@@ -14,7 +14,10 @@ export default LinkBusy;
 
 export function LinkBusy() {
   const ariaBusyAttribute = createAttributeController('aria-busy', booleanString);
-  /** allows to differentiate between links that have custom aria-busy logic applied locally, and links touched by this script. */
+  /**
+   * Allows to differentiate between links that have custom aria-busy logic applied locally, and
+   * links touched by this script.
+   */
   const markerAttribute = createAttributeController('data-nextjs-link-busy', booleanString);
 
   function handleNavigationStart(anchor: HTMLAnchorElement) {

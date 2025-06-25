@@ -2,9 +2,7 @@
 import type { IDBPDatabase } from 'idb';
 import type { Cache as SWRCache } from 'swr';
 
-/**
- * Configuration options
- */
+/** Configuration options */
 export type Config = {
   /** Database Name */
   dbName: string;
@@ -18,41 +16,25 @@ export type Config = {
   onError?: (reason: any) => void;
 };
 
-/**
- * Cache provider interface, missing in swr
- */
+/** Cache provider interface, missing in swr */
 export type CacheProvider<Data = any> = (globalCache: Readonly<SWRCache<Data>>) => SWRCache<Data>;
 
 export type CacheProviderResult<Data> = SWRCache<Data> & { clear: () => void };
 
-/**
- * Use cache provider interface
- */
+/** Use cache provider interface */
 export type UseCacheProvider<Data = any> = (props: Config) => CacheProvider<Data> | undefined;
 
-/**
- * Storage handler for Transferrable object
- */
+/** Storage handler for Transferrable object */
 export interface StorageHandler<Data = any, StoreObject = any> {
-  /**
-   * Initialize
-   */
+  /** Initialize */
   initialize(upgradeDb: IDBPDatabase<unknown>, storeName: string): void;
 
-  /**
-   * Upgrade
-   */
+  /** Upgrade */
   upgrade(upgradeDb: IDBPDatabase<unknown>, storeName: string, oldVesion: number): void;
 
-  /**
-   * Value replacer on db put
-   * Return undefined ignore item persistence
-   */
+  /** Value replacer on db put Return undefined ignore item persistence */
   replace: (key: string, value: Data) => StoreObject | undefined;
 
-  /**
-   * Value reviver on db get
-   * Return undefined to remove item from cache
-   */
+  /** Value reviver on db get Return undefined to remove item from cache */
   revive: (key: string, storeObject: StoreObject) => Data | undefined;
 }

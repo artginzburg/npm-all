@@ -4,34 +4,24 @@ import type { StorageHandler } from '../types';
 type Data = any;
 type StoreObject = Data;
 
-/**
- * Simple storage handler
- */
+/** Simple storage handler */
 const simpleStorageHandler: StorageHandler<Data, StoreObject> = {
-  /**
-   * @inheritdoc
-   */
+  /** @inheritdoc */
   initialize(database, storeName) {
     database.createObjectStore(storeName);
   },
 
-  /**
-   * @inheritdoc
-   */
+  /** @inheritdoc */
   upgrade(database, storeName) {
     database.deleteObjectStore(storeName);
 
     this.initialize(database, storeName);
   },
 
-  /**
-   * @inheritdoc
-   */
+  /** @inheritdoc */
   replace: (_key, value) => value,
 
-  /**
-   * @inheritdoc
-   */
+  /** @inheritdoc */
   revive: (_key, storeObject) => storeObject,
 } as const;
 

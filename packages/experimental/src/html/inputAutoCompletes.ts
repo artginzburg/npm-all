@@ -32,13 +32,18 @@ export const inputAutoCompletes = {
       autoComplete: 'address-level2',
       autoCapitalize: 'on',
     },
-    /** Has to then be manually split into `street` and `home_number`, if the back-end expects those. But back-end should not expect those, as it just adds a level of complexity, not to mention that there's no autocomplete to get street and house number separately (which your designer should also be aware of) */
+    /**
+     * Has to then be manually split into `street` and `home_number`, if the back-end expects those.
+     * But back-end should not expect those, as it just adds a level of complexity, not to mention
+     * that there's no autocomplete to get street and house number separately (which your designer
+     * should also be aware of)
+     */
     streetAndHouse: {
       type: 'text',
       autoComplete: 'address-line1',
       autoCapitalize: 'on',
     },
-    /** aka "flat number" */
+    /** Aka "flat number" */
     apartmentNumber: {
       type: 'text',
       autoComplete: 'address-line2',

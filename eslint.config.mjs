@@ -17,7 +17,11 @@ const config = tseslint.config(
       'import-x/order': [
         'warn',
         {
-          /** @type {NonNullable<import('eslint-plugin-import-x')['rules']['order']['defaultOptions']['0']>['groups']} */
+          /**
+           * @type {NonNullable<
+           *   import('eslint-plugin-import-x')['rules']['order']['defaultOptions']['0']
+           * >['groups']}
+           */
           groups: [
             'external',
             'internal',
@@ -30,9 +34,17 @@ const config = tseslint.config(
             'type',
             'object',
           ],
-          /** @type {NonNullable<import('eslint-plugin-import-x')['rules']['order']['defaultOptions']['0']>['newlines-between']} */
+          /**
+           * @type {NonNullable<
+           *   import('eslint-plugin-import-x')['rules']['order']['defaultOptions']['0']
+           * >['newlines-between']}
+           */
           'newlines-between': 'always',
-          /** @type {NonNullable<import('eslint-plugin-import-x')['rules']['order']['defaultOptions']['0']>['alphabetize']} */
+          /**
+           * @type {NonNullable<
+           *   import('eslint-plugin-import-x')['rules']['order']['defaultOptions']['0']
+           * >['alphabetize']}
+           */
           alphabetize: { order: 'asc' },
         },
       ],

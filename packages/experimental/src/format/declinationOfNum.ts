@@ -2,10 +2,7 @@
  * You can test how it works with number = 0, number = 1, number = 2
  *
  * @example
- *  declinationOfNum(
- *    Object.keys(updatedUser).length,
- *    ['изменение', 'изменения', 'изменений'],
- *  )
+ *   declinationOfNum(Object.keys(updatedUser).length, ['изменение', 'изменения', 'изменений']);
  */
 export function declinationOfNum(
   number: number,

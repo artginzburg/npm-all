@@ -1,5 +1,6 @@
 /**
  * Check if the Current Url is same as New Url
+ *
  * @param currentUrl {string}
  * @param newUrl {string}
  * @returns {boolean}
@@ -26,6 +27,7 @@ export function checkIsAnchorOfCurrentUrl(currentUrl: string, newUrl: string): b
 
 /**
  * Convert the url to Absolute URL based on the current window location.
+ *
  * @param url {string}
  * @returns {string}
  */
@@ -35,6 +37,7 @@ export const toAbsoluteURL = (url: string): string => {
 
 /**
  * Check if it is hash anchor or same page anchor
+ *
  * @param currentUrl {string} Current Url Location
  * @param newUrl {string} New Url detected with each anchor
  * @returns {boolean}
@@ -47,6 +50,7 @@ export const checkIsHashAnchor = (currentUrl: string, newUrl: string): boolean =
 
 /**
  * Check if it is Same Host name
+ *
  * @param currentUrl {string} Current Url Location
  * @param newUrl {string} New Url detected with each anchor
  * @returns {boolean}

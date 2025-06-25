@@ -9,13 +9,12 @@ import type { State as SWRState } from 'swr';
 
 /**
  * Unlike what SWR types suggest, key is always a serialized string
+ *
  * @override import('swr').Key
  */
 type Key = string;
 
-/**
- * Cache provider factory
- */
+/** Cache provider factory */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default async function createCacheProvider<Data = any, Error = any>(
   { dbName, storeName, storageHandler = simpleStorageHandler, version = 1, onError = noop }: Config,
@@ -63,9 +62,7 @@ export default async function createCacheProvider<Data = any, Error = any>(
     return map;
   }
 
-  /**
-   * SWR Cache provider API
-   */
+  /** SWR Cache provider API */
   return {
     keys: () => map.keys(),
 
@@ -100,6 +97,7 @@ export default async function createCacheProvider<Data = any, Error = any>(
 
   /**
    * Do not store as non-native errors are not serializable, other properties are optional
+   *
    * @link https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm#supported_types
    */
   function isFetchInfo(state: State): boolean {

@@ -20,7 +20,10 @@ export function typedSplit<Word extends string, Separator extends string>(
   return word.split(separator) as Split<Word, Separator>;
 }
 
-/** If you're passing a literal array — remember to use `as const`, otherwise the return type will be `never` */
+/**
+ * If you're passing a literal array — remember to use `as const`, otherwise the return type will be
+ * `never`
+ */
 export function typedJoin<Words extends string[], Separator extends string>(
   arr: Words,
   separator: Separator,

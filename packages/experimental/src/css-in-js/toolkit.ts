@@ -20,7 +20,10 @@ export const hideScrollbarPrecisely = `
   }
 `;
 
-/** Rewrote this tool in order to not rely on userAgent, but instead check if the device actually supports -webkit-line-clamp */
+/**
+ * Rewrote this tool in order to not rely on userAgent, but instead check if the device actually
+ * supports -webkit-line-clamp
+ */
 export function enableEllipsis(lineClamp = 1) {
   return `
     overflow: hidden;
