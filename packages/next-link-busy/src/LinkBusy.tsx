@@ -53,6 +53,9 @@ export function LinkBusy() {
     const newUrl = anchor?.href;
     if (!newUrl) return;
 
+    // Download links don't trigger navigation — no pushState/popstate to clear aria-busy
+    if (anchor.hasAttribute('download')) return;
+
     const currentUrl = window.location.href;
 
     const sameHost = checkIsSameHostName(currentUrl, newUrl);
